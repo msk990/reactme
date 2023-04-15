@@ -2,57 +2,36 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import NavbarMain from './common/NavbarMain';
+import { Route, Routes } from 'react-router-dom';
+import { Dashboard } from './features/dashboard/Dashboard';
+import { Menu } from './features/menu/Menu';
+import { NewItem } from './features/new-ingredient/NewItem';
+import { Ingredients } from './features/ingredients/Ingredients';
+import { Food } from './features/food/Food';
+import { NewFood } from './features/new-food/NewFood';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
-  );
+    <>
+       <NavbarMain />
+    <div className="mt-4"> juje </div>
+    <Routes>
+
+          <Route path="/" element={<Dashboard />} />
+          <Route path="dashboard" element={<Dashboard />} />
+
+          <Route path="menu" element={<Menu />} />
+
+          <Route path="food" element={<Food />} />
+
+          <Route path="ingredients" element={<Ingredients />} />
+
+          <Route path="new-item" element={<NewItem />} />
+          <Route path="new-food" element={<NewFood />} />
+    </Routes>
+    </>
+  )
 }
 
 export default App;

@@ -1,0 +1,11 @@
+{
+    "navbar": {
+        "dashboard" : "Dashboard",
+        "menu":"Menu",
+        "food": "Food",
+        "ingredients": "Ingredients",
+        "operations": "Operations",
+        "inventory": "Inventory",
+        "deliveries": "Deliveries"
+    }
+}

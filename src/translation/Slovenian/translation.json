@@ -1,0 +1,11 @@
+{
+   "navbar": {
+        "dashboard" : "Začetek",
+        "menu": "Jedilnik",
+        "food": "Hrana",
+        "ingredients": "Sestavine",
+        "operations": " Operacije",
+        "inventory": "Inventar",
+        "deliveries": "Dostave"
+    }
+}
